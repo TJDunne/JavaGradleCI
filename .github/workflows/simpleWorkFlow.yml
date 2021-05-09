@@ -30,3 +30,7 @@ jobs:
       #Run our build using gradle
       - name: Build with Gradle
         run: ./gradlew build
+      - uses: actions/upload-artifact@v2
+        with:
+           name: Package
+           path: build/libs
